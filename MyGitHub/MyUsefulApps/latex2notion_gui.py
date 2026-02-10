@@ -10,8 +10,12 @@ A graphical interface with:
 
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, scrolledtext
-from latex2notion import convert
+import sys
 import os
+
+# Add the latex2notion directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'latex2notion'))
+from latex2notion import convert
 
 
 class LaTeX2NotionGUI:
